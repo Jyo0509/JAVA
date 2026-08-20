@@ -1,0 +1,63 @@
+import java.util.Scanner;
+public class Main
+{
+    public  static void main(String[] args)
+    {
+        int l,b;
+        Scanner a=new Scanner(System.in);
+        System.out.println("Enter no of Rectangles:");
+        int n=a.nextInt();
+        Rect[] r=new Rect[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("Enter length of Rect"+(i+1));
+            l=a.nextInt();
+            System.out.println("Enter breadth of Rect"+(i+1));
+            b=a.nextInt();
+            r[i]=new Rect(l,b);
+       }   
+        System.out.println("Area of all Rect:");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("Area of Rectangle"+(i+1));
+            r[i].display();
+        }
+    }    
+}
+class Rect
+{
+    int l,b;
+    Rect (int a,int c)
+    {
+        l=a;
+        b=c;
+
+    }
+    public void display()
+    {
+        System.out.println("Area is"+(l*b));
+    }
+}
+
+
+
+
+output:
+Enter no of Rectangles:
+3
+Enter length of Rect1
+10
+Enter breadth of Rect1
+10
+Enter length of Rect2
+20
+Enter breadth of Rect2
+30
+Enter length of Rect3
+5
+Enter breadth of Rect3
+7
+Area of all Rect:
+Area of Rectangle1Area is100
+Area of Rectangle2Area is600
+Area of Rectangle3Area is35
